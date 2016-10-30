@@ -1,0 +1,17 @@
+﻿@model IEnumerable<showerthoughts.Models.thought>
+
+@foreach (var item in Model)
+{
+
+    <div>
+
+        <div> @Html.ActionLink(item.title, "goToThought", new { id = item.id }) </div>
+
+        <div> @Html.DisplayFor(modelItem => item.bdText) </div>
+
+        @Html.DisplayFor(modelItem => item.date)
+
+        @Html.DisplayFor(modelItem => item.rate)
+    </div>
+}
+
