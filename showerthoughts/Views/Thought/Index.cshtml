@@ -1,4 +1,5 @@
-﻿@model IEnumerable<showerthoughts.Models.thought>
+﻿@using System.Web
+@model IEnumerable<showerthoughts.Models.thought>
 
 @foreach (var item in Model)
 {
@@ -7,7 +8,7 @@
 
         <div> @Html.ActionLink(item.title, "goToThought", new { id = item.id }) </div>
 
-        <div> @Html.DisplayFor(modelItem => item.bdText) </div>
+       <div >@Html.Raw(item.bdText) </div>       
 
         @Html.DisplayFor(modelItem => item.date)
 

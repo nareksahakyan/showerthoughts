@@ -23,10 +23,10 @@ namespace showerthoughts.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]        
         public ActionResult Create(thought thought)
         {
-            thought.rate = 0;
+            thought.rate = 0;            
 
             if (ModelState.IsValid)
             {
