@@ -17,6 +17,7 @@ namespace showerthoughts.Controllers
             return View(db.thoughts.ToList());
         }
 
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -26,7 +27,9 @@ namespace showerthoughts.Controllers
         [ValidateAntiForgeryToken]        
         public ActionResult Create(thought thought)
         {
-            thought.rate = 0;            
+            thought.rate = 0;
+
+            thought.authorId = User.Identity.Name;
 
             if (ModelState.IsValid)
             {

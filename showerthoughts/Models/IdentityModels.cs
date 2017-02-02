@@ -21,7 +21,7 @@ namespace showerthoughts.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ShowerConnection", throwIfV1Schema: false)
         {
         }
 

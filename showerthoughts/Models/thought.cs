@@ -19,6 +19,9 @@ namespace showerthoughts.Models
         public int rate { get; set; }
         
         //autor
+
+        public string authorId { get; set; } 
+
         //subthought
     }
 }
