@@ -5,14 +5,15 @@ namespace showerthoughts.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<showerthoughts.Models.showerthoughtsDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<showerthoughts.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "showerthoughts.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(showerthoughts.Models.showerthoughtsDBContext context)
+        protected override void Seed(showerthoughts.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

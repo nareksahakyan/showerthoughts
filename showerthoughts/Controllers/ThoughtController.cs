@@ -30,6 +30,7 @@ namespace showerthoughts.Controllers
             thought.rate = 0;
 
             thought.authorId = User.Identity.Name;
+            thought.date = DateTime.Now;
 
             if (ModelState.IsValid)
             {

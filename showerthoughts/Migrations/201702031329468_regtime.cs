@@ -3,16 +3,16 @@ namespace showerthoughts.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class authorIdadded : DbMigration
+    public partial class regtime : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.thoughts", "authorId", c => c.String());
+            AddColumn("dbo.AspNetUsers", "registrationDate", c => c.DateTime(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.thoughts", "authorId");
+            DropColumn("dbo.AspNetUsers", "registrationDate");
         }
     }
 }

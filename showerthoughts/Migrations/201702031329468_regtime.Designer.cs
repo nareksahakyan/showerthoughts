@@ -7,13 +7,13 @@ namespace showerthoughts.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class first : IMigrationMetadata
+    public sealed partial class regtime : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(first));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(regtime));
         
         string IMigrationMetadata.Id
         {
-            get { return "201610271838271_first"; }
+            get { return "201702031329468_regtime"; }
         }
         
         string IMigrationMetadata.Source

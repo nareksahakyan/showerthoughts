@@ -65,6 +65,10 @@ namespace showerthoughts.Models
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(100, MinimumLength = 3)]
+        public string accountName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

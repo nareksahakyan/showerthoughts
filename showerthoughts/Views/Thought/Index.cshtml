@@ -8,11 +8,15 @@
 
         <div> @Html.ActionLink(item.title, "goToThought", new { id = item.id }) </div>
 
-       <div >@Html.Raw(item.bdText) </div>       
+        <div>@Html.Raw(item.bdText) </div>
 
         @Html.DisplayFor(modelItem => item.date)
-
-        @Html.DisplayFor(modelItem => item.rate)
+        <p>
+            @Html.DisplayFor(modelItem => item.rate)
+        </p>
+        <p>
+            @Html.DisplayFor(modelItem => item.authorId)
+        </p>
     </div>
 }
 
