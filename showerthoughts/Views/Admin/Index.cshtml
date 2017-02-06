@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Ajax.BeginForm("getUsers", new AjaxOptions
+{
+
+    HttpMethod = "POST",
+    UpdateTargetId = "result",
+    InsertionMode = InsertionMode.Replace
+}))
+{
+    <input type="submit" value="Users" />
+}
+<div id="result">
+
+</div>
