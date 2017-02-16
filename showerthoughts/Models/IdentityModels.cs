@@ -32,4 +32,19 @@ namespace showerthoughts.Models
             return new ApplicationDbContext();
         }
     }
+
+
+    public class ApplicataionMainDbContext : DbContext
+    {
+        public ApplicataionMainDbContext()
+            : base("ShowerConnection")
+        {
+        }
+        public static ApplicataionMainDbContext Create()
+        {
+            return new ApplicataionMainDbContext();
+        }
+
+    }
+
 }

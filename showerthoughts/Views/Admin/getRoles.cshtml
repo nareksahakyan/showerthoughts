@@ -1,0 +1,25 @@
+﻿@model List<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+
+@using (Ajax.BeginForm("createRole", new AjaxOptions
+{
+    HttpMethod="GET",
+    UpdateTargetId="result",
+    InsertionMode=InsertionMode.Replace
+}))
+{
+    <input type="submit" value="Create" />
+}
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+    </tr>
+@foreach (var item in Model) { 
+    <tr>
+        <td>                     
+                @Html.DisplayFor(modelitem => item.Name)            
+        </td>
+    </tr>
+}
+</table>
